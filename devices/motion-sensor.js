@@ -34,7 +34,7 @@ class MotionSensor extends AlarmDevice {
             state_topic: this.stateTopic,
             json_attributes_topic: this.attributesTopic,
             device_class: this.className,
-            devcie: {
+            device: {
                 identifiers: [
                     this.deviceId+'_ringmqtt'
                 ],
