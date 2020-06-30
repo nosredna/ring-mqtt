@@ -33,7 +33,15 @@ class MotionSensor extends AlarmDevice {
             payload_not_available: 'offline',
             state_topic: this.stateTopic,
             json_attributes_topic: this.attributesTopic,
-            device_class: this.className
+            device_class: this.className,
+            devcie: {
+                identifiers: [
+                    this.deviceId+'_ringmqtt'
+                ],
+                name: this.device.name,
+                model: "Motion Sensor",
+                manufacturer: "Ring"
+            }
         }
 
         debug('HASS config topic: '+this.configTopic)
